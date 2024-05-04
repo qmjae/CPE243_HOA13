@@ -1,0 +1,10 @@
+---
+- hosts: controlNode
+  become: true
+  tasks:
+
+    - name: Include ACL Manager Role
+      include_role:
+        name: acl_manager
+        tasks_from: block_ip
+
